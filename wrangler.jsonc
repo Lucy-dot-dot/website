@@ -2,7 +2,7 @@
 // Alternative to git-connected Pages: `npx wrangler deploy`
 // after `npm run build`.
 {
-  "name": "sundorf-me",
+  "name": "website",
   "compatibility_date": "2026-10-09",
   "assets": {
     "directory": "./dist/sundorf-me/browser",
