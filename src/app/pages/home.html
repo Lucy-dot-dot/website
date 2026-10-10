@@ -1,0 +1,98 @@
+<section class="py-8">
+  <p class="mb-2 font-mono text-sm text-accent">hi, i'm</p>
+  <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Lucy Sundorf</h1>
+  <div class="mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-[#5BCEFA] via-white to-[#F5A9B8]" aria-hidden="true"></div>
+  <p class="mt-4 max-w-prose text-lg text-fog">
+    Software developer with a soft spot for Rust, security tooling and small services that quietly do
+    their job. By day I build software; by night my servers pretend to be weaker than they are — mostly
+    to see who comes knocking.
+  </p>
+  <div class="mt-6 flex flex-wrap gap-3">
+    <a
+      routerLink="/projects"
+      class="rounded-md bg-accent px-4 py-2 font-medium text-ink transition-colors hover:bg-emerald-300"
+      >View projects</a
+    >
+    <a
+      [href]="githubUrl"
+      target="_blank"
+      rel="noopener"
+      class="rounded-md border border-line px-4 py-2 font-medium transition-colors hover:border-accent hover:text-accent"
+      >GitHub &rarr;</a
+    >
+  </div>
+</section>
+
+<section class="mt-8 border-t border-line pt-8">
+  <h2 class="text-xl font-semibold text-white">About</h2>
+  <div class="mt-3 max-w-prose space-y-3 text-fog">
+    <p>
+      I like building tools that sit at the intersection of networking and security: honeypots, SSH
+      utilities, config editors and the occasional Discord bot. Most of my code is open source on
+      GitHub — small, focused utilities written in Rust, because I like programs that start fast and
+      stay out of the way.
+    </p>
+    <p>
+      For completeness: I'm a trans woman, and I go by Lucy. If you knew me under a different name,
+      no you didn't. (Kidding. Hi again.)
+    </p>
+    <p>
+      When I'm not writing code, I'm probably reading security write-ups, feeding my
+      {{ projectCount }}+ repositories, or hardening a container that absolutely did not need to be
+      that hardened. This site is intentionally boring: static HTML, no trackers, system fonts. It
+      loads fast even on the oldest phone I could find.
+    </p>
+  </div>
+
+  <h3 class="mt-6 text-sm font-semibold uppercase tracking-wider text-fog">Things I work with</h3>
+  <ul class="mt-3 flex flex-wrap gap-2">
+    @for (item of stack; track item) {
+      <li class="rounded-full border border-line px-3 py-1 text-sm text-fog">{{ item }}</li>
+    }
+  </ul>
+</section>
+
+<section class="mt-8 border-t border-line pt-8">
+  <h2 class="text-xl font-semibold text-white">Currently</h2>
+  <ul class="mt-3 max-w-prose list-disc space-y-2 pl-5 text-fog">
+    <li>
+      Actively developing
+      <a routerLink="/projects" class="text-accent underline">{{ featured.name }}</a> — a
+      high-interaction SSH honeypot with a live dashboard.
+    </li>
+    <li>Reporting abusive IPs to AbuseIPDB, so the wider internet has an easier time than I do.</li>
+    <li>Slowly collecting more Rust than my disk knows what to do with.</li>
+  </ul>
+</section>
+
+<section class="mt-8 border-t border-line pt-8">
+  <h2 class="text-xl font-semibold text-white">Contact</h2>
+  <p class="mt-3 max-w-prose text-fog">
+    The fastest way to reach me is GitHub — open an issue on any repo or check my profile. For
+    everything else: <a href="mailto:lucy&#64;sundorf.me" class="text-accent underline">lucy&#64;sundorf.me</a>.
+  </p>
+</section>
+
+<section class="mt-8 border-t border-line pt-8">
+  <h2 class="text-xl font-semibold text-white">AbuseIPDB</h2>
+  <p class="mt-3 max-w-prose text-fog">
+    I contribute abuse reports to AbuseIPDB, a blacklist of IP addresses engaged in malicious
+    behavior. My honeypot findings feed straight into it.
+  </p>
+  <a
+    class="mt-4 inline-block"
+    href="https://www.abuseipdb.com/user/66953"
+    title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="https://www.abuseipdb.com/contributor/66953.svg"
+      alt="AbuseIPDB Contributor Badge"
+      width="401"
+      height="110"
+      loading="lazy"
+      class="h-auto w-56"
+    />
+  </a>
+</section>

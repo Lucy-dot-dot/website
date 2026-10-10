@@ -1,0 +1,5 @@
+# Static Angular build: prerendered pages exist as real files, and the
+# prerendered wildcard route produces 404.html which Cloudflare Pages serves
+# automatically for unknown URLs. No SPA fallback is required.
+# Add your own redirects below if you ever need them, e.g.:
+# /old-page / 301
